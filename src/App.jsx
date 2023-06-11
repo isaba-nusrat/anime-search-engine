@@ -1,5 +1,6 @@
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Popular from "./Components/Popular/Popular";
+import AnimeItem from "./Components/AnimeItem/AnimeItem";
 
 import "./App.scss";
 import "./styles/global.scss";
@@ -7,9 +8,10 @@ import "./styles/global.scss";
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
-        <Popular />
-      </div>
+      <Routes>
+        <Route path="/" element={<Popular />} />
+        <Route path="/anime/:id" element={<AnimeItem />} />
+      </Routes>
     </BrowserRouter>
   );
 }
