@@ -1,4 +1,4 @@
-import React, { createContext, useContext } from "react";
+import React, { createContext, useContext, useEffect } from "react";
 
 const GlobalContext = createContext();
 
@@ -22,6 +22,18 @@ export const GlobalContextProvider = ({ children }) => {
   };
 
   const [state, dispatch] = useReducer(reducer, initialState);
+
+  //fetch popular anime
+  const getPopularAnime = async () => {
+    const response = await fetch(`${baseUrl}/top/anime?filter=bypopularity`);
+    const data = await response.json();
+    console.log(data);
+  };
+
+  //initial render
+  useEffect(() => {
+    getPopularAnime();
+  }, []);
 
   return (
     <GlobalContext.Provider
