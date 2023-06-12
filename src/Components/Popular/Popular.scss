@@ -4,7 +4,7 @@
 .popular-anime {
   font-family: $font-merriweather;
   display: flex;
-  background-color: maroon;
+  background: linear-gradient(to right, #a40707, #f0621b);
   &__display-box {
     margin-top: 2rem;
     padding: 2rem 0 2rem 5rem;
