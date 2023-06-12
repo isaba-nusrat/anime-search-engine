@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
+import "./AnimeItem.scss";
 
 function AnimeItem() {
   const { id } = useParams();
@@ -33,11 +34,21 @@ function AnimeItem() {
     const response = await fetch(`https://api.jikan.moe/v4/anime/${anime}`);
     const data = await response.json();
     setAnime(data.data);
+  };
+
+  //get characters
+  const getCharacters = async (anime) => {
+    const response = await fetch(
+      `https://api.jikan.moe/v4/anime/${anime}/characters`
+    );
+    const data = await response.json();
+    setCharacters(data.data);
     console.log(data.data);
   };
 
   useEffect(() => {
     getAnime(id);
+    getCharacters(id);
   }, []);
 
   return (
@@ -92,7 +103,7 @@ function AnimeItem() {
           </div>
         </div>
 
-        <p className="description">
+        <p className="anime-item__description">
           {showDetails ? synopsis : synopsis?.substring(0, 450) + "..."}
           <button
             onClick={() => {
