@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useGlobalContext } from "../../context/global";
-import "./Popular.scss";
+import "./Upcoming.scss";
 
-function Popular({ rendered }) {
-  const { popularAnime, isSearch, searchResults } = useGlobalContext();
+function Upcoming({ rendered }) {
+  const { upcomingAnime, isSearch, searchResults } = useGlobalContext();
 
   const conditionalRender = () => {
-    if (!isSearch && rendered === "popular") {
-      return popularAnime?.map((anime) => {
+    if (!isSearch && rendered === "upcoming") {
+      return upcomingAnime?.map((anime) => {
         return (
           <Link to={`/anime/${anime.mal_id}`} key={anime.mal_id}>
             <img src={anime.images.jpg.large_image_url} alt="" />
@@ -27,10 +27,10 @@ function Popular({ rendered }) {
   };
 
   return (
-    <div className="popular-anime">
-      <div className="popular-anime__display-box">{conditionalRender()}</div>
+    <div className="upcoming-anime">
+      <div className="upcoming-anime__display-box">{conditionalRender()}</div>
     </div>
   );
 }
 
-export default Popular;
+export default Upcoming;

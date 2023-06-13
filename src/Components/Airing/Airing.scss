@@ -1,14 +1,14 @@
 @import "../../styles/global.scss";
 @import "../../styles//fonts.scss";
 
-.popular-anime {
+.airing-anime {
   font-family: $font-merriweather;
   display: flex;
   //background: linear-gradient(to right, #a40707, #f0621b);
   &__display-box {
     margin-top: 2rem;
-    padding: 2rem 6rem 2rem 5rem;
-
+    padding: 2rem 0 2rem 5rem;
+    padding-right: 0;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

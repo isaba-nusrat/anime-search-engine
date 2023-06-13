@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useState } from "react";
 import "./AnimeItem.scss";
 
@@ -34,6 +34,7 @@ function AnimeItem() {
     const response = await fetch(`https://api.jikan.moe/v4/anime/${anime}`);
     const data = await response.json();
     setAnime(data.data);
+    console.log(data.data);
   };
 
   //get characters
@@ -43,7 +44,6 @@ function AnimeItem() {
     );
     const data = await response.json();
     setCharacters(data.data);
-    console.log(data.data);
   };
 
   useEffect(() => {
@@ -126,6 +126,23 @@ function AnimeItem() {
             allowFullScreen
           ></iframe>
         )}
+      </div>
+
+      <h3 className="anime-item__title">Characters</h3>
+      <div className="anime-item__characters">
+        {characters?.map((character, index) => {
+          const { role } = character;
+          const { images, name, mal_id } = character.character;
+          return (
+            <Link to={`/character/${mal_id}`} key={index}>
+              <div className="anime-item__character">
+                <img src={images?.jpg?.image_url} alt="character-img" />
+                <h4>{name}</h4>
+                <p>{role}</p>
+              </div>
+            </Link>
+          );
+        })}
       </div>
     </div>
   );
