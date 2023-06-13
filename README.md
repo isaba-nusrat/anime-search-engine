@@ -1,6 +1,6 @@
 # 🍥 Anime Search Engine
 
-Welcome to my Anime Search Engine, a react application that helps users to find anime to watch. Users can search anime by names, see the information including trailer and character list and image gallery. With clicking the buttons in the nav bar, user can easily find the currently airing and upcoming anime. So let's search which anime to watch next!
+Welcome to my Anime Search Engine, a react application that helps users to find anime to watch. Users can search anime by names, view information including trailer and character list and image gallery. With clicking the buttons in the nav bar, user can easily find the currently airing and upcoming anime. So let's search which anime to watch next!
 
 <img width="972" alt="anime-search-engine-4" src="https://github.com/isaba-nusrat/capstone-project/assets/79944634/754d1f06-17e3-41e0-92dc-4aa1bd53faf3">
 
