@@ -95,6 +95,18 @@ function Home() {
               Upcoming
             </button>
           </div>
+
+          <div className="filter-btn log-in">
+            <button
+              onClick={() => {
+                setRendered("upcoming");
+                getUpcomingAnime();
+              }}
+              className="log-in-btn"
+            >
+              LogIn
+            </button>
+          </div>
         </div>
       </header>
       {switchComponents()}

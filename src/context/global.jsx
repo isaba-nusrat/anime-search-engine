@@ -116,6 +116,7 @@ export const GlobalContextProvider = ({ children }) => {
     );
     const data = await response.json();
     dispatch({ type: GET_CHARACTER_PICTURES, payload: data.data });
+    console.log(data.data);
   };
 
   //initial render

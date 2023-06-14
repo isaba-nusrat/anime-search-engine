@@ -31,6 +31,7 @@
 
     button {
       display: flex;
+      flex-direction: row;
       align-items: center;
       gap: 0.5rem;
       padding: 0.7rem 1.5rem;
@@ -73,4 +74,9 @@
       }
     }
   }
+}
+
+button.log-in-btn {
+  background: linear-gradient(to right, #b347ad 23%, #f0621b);
+  color: #fff;
 }

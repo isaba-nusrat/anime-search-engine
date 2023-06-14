@@ -34,7 +34,6 @@ function AnimeItem() {
     const response = await fetch(`https://api.jikan.moe/v4/anime/${anime}`);
     const data = await response.json();
     setAnime(data.data);
-    console.log(data.data);
   };
 
   //get characters
