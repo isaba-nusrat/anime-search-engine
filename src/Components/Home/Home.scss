@@ -1,19 +1,23 @@
 .home {
   //background: linear-gradient(to right, #b347ad 23%, #f0621b);
-  background-color: #000;
+  //background-color: #000;
+  background: url("../../assets/images/bg-image.jpeg");
+  background-size: contain;
   header {
     padding: 2rem 5rem;
     width: 60%;
+    height: 350px;
     margin: 0 auto;
     transition: all 0.4s ease-in-out;
   }
 
   h1 {
     cursor: pointer;
-    background: linear-gradient(to right, #b347ad 23%, #f0621b);
+    background: linear-gradient(to right, #f3f6f7 23%, #043862);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 0.4s ease-in-out;
+    font-size: 5rem;
   }
 
   &__logo {
@@ -34,7 +38,7 @@
       flex-direction: row;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.7rem 1.5rem;
+      padding: 0.7rem 0.9rem;
       outline: none;
       border-radius: 30px;
       font-size: 1.2rem;
@@ -77,6 +81,12 @@
 }
 
 button.log-in-btn {
-  background: linear-gradient(to right, #b347ad 23%, #f0621b);
+  background: linear-gradient(to right, #3a7bec 23%, #25c2e9);
   color: #fff;
+}
+
+.log-in {
+  a {
+    text-decoration: none;
+  }
 }

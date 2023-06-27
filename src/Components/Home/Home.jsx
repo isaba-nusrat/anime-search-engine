@@ -1,12 +1,11 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Popular from "../Popular/Popular";
 import Upcoming from "../Upcoming/Upcoming";
 import Airing from "../Airing/Airing";
 import { useGlobalContext } from "../../context/global";
-
-import animatedImage from "../../assets/images/nezuko.gif";
-
+import { Link } from "react-router-dom";
+import SoundEffect from "../SoundEffect/SoundEffect";
 import "./Home.scss";
 
 function Home() {
@@ -20,6 +19,14 @@ function Home() {
     getAiringAnime,
   } = useGlobalContext();
   const [rendered, setRendered] = useState("popular");
+  const [user, setUser] = useState("");
+
+  useEffect(() => {
+    const user = localStorage.getItem("user");
+    if (user) {
+      setUser(user);
+    }
+  }, []);
 
   const switchComponents = () => {
     switch (rendered) {
@@ -34,17 +41,21 @@ function Home() {
     }
   };
 
+  const handleLinkClick = (event) => {
+    if (event) {
+      event.preventDefault();
+    }
+  };
+
+  const handleLogOut = () => {
+    setUser(null);
+    localStorage.removeItem("user");
+  };
+
   return (
     <div className="home">
       <header>
         <div className="home__logo">
-          <img
-            src={animatedImage}
-            alt="Animated Image"
-            className="animated-image"
-            height="120"
-            width="120"
-          />
           <h1>
             {rendered === "popular"
               ? "Popular Anime"
@@ -55,9 +66,11 @@ function Home() {
         </div>
 
         <div className="home__search-container">
+          <SoundEffect />
           <div className="filter-btn popular-filter">
             <button
               onClick={() => {
+                handleLinkClick();
                 setRendered("popular");
               }}
             >
@@ -72,12 +85,15 @@ function Home() {
                 value={search}
                 onChange={handleChange}
               />
-              <button type="submit">Search</button>
+              <button type="submit" onClick={handleLinkClick()}>
+                Search
+              </button>
             </div>
           </form>
           <div className="filter-btn airing-filter">
             <button
               onClick={() => {
+                handleLinkClick();
                 setRendered("airing");
                 getAiringAnime();
               }}
@@ -88,6 +104,7 @@ function Home() {
           <div className="filter-btn upcoming-filter">
             <button
               onClick={() => {
+                handleLinkClick();
                 setRendered("upcoming");
                 getUpcomingAnime();
               }}
@@ -95,18 +112,19 @@ function Home() {
               Upcoming
             </button>
           </div>
-
-          <div className="filter-btn log-in">
-            <button
-              onClick={() => {
-                setRendered("upcoming");
-                getUpcomingAnime();
-              }}
-              className="log-in-btn"
-            >
-              LogIn
-            </button>
-          </div>
+          {!user ? (
+            <div className="filter-btn log-in">
+              <Link to="/signin/form">
+                <button className="log-in-btn">LogIn</button>
+              </Link>
+            </div>
+          ) : (
+            <div className="filter-btn log-in">
+              <button className="log-in-btn" onClick={handleLogOut}>
+                LogOut
+              </button>
+            </div>
+          )}
         </div>
       </header>
       {switchComponents()}

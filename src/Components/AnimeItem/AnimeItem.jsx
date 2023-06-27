@@ -126,7 +126,6 @@ function AnimeItem() {
           ></iframe>
         )}
       </div>
-
       <h3 className="anime-item__title">Characters</h3>
       <div className="anime-item__characters">
         {characters?.map((character, index) => {
