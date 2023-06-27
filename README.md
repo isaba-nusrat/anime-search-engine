@@ -17,9 +17,7 @@ Welcome to my Anime Search Engine, a react application that helps users to find 
   - CSS (including Sass)
   - JavaScript
   - React (include any specific libraries or frameworks if applicable)
-  
-- Back-end
-  - Node.js
+
 
 ## Screenshots
 
