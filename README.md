@@ -2,7 +2,7 @@
 
 Welcome to my Anime Search Engine, a react application that helps users to find anime to watch. Users can search anime by names, view information including trailer and character list and image gallery. With clicking the buttons in the nav bar, user can easily find the currently airing and upcoming anime. So let's search which anime to watch next!
 
-<img width="972" alt="anime-search-engine-4" src="https://github.com/isaba-nusrat/capstone-project/assets/79944634/754d1f06-17e3-41e0-92dc-4aa1bd53faf3">
+<img width="1440" alt="home" src="https://github.com/isaba-nusrat/anime-search-engine/assets/79944634/0838d3e0-c056-4ce5-81ba-f85046e7529d">
 
 ## Features ✨
 
@@ -23,11 +23,14 @@ Welcome to my Anime Search Engine, a react application that helps users to find 
 
 ## Screenshots
 
-### Home / Popular Anime Page
-![anime-search-engine-project-3](https://github.com/isaba-nusrat/capstone-project/assets/79944634/85d29824-ccd1-4b01-a775-d4af8e8ac4f3)
-
 ### Anime Search
-![anime-search-engine-project](https://github.com/isaba-nusrat/capstone-project/assets/79944634/36c1ee5c-864a-4e13-a2f1-06ae1579ee62)
+![ss_search](https://github.com/isaba-nusrat/anime-search-engine/assets/79944634/d7e933cc-db72-4837-8520-7d03ddf92b5b)
+
 
 ### Anime Details
-![anime-search-engine-project-2](https://github.com/isaba-nusrat/capstone-project/assets/79944634/11dd7d65-5744-4b83-981a-5ac0835540ea)
+![ss_details](https://github.com/isaba-nusrat/anime-search-engine/assets/79944634/24252370-d367-4317-9d72-aa4652dc1565)
+
+
+### Character Image Gallery Page
+
+![ss_character-image-gallery](https://github.com/isaba-nusrat/anime-search-engine/assets/79944634/b737c937-a89a-4989-9e74-4d98b205a90a)
