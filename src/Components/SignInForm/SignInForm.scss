@@ -1,0 +1,77 @@
+@import "../../styles/fonts.scss";
+
+.sign-in {
+  background-color: #020c10;
+  color: #fff;
+  height: 100vh;
+  font-family: $font-merriweather;
+
+  form {
+    margin: 20rem;
+    margin-top: 2rem;
+  }
+
+  &__title {
+    cursor: pointer;
+    background: linear-gradient(to right, #3a7bec 23%, #25c2e9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.4s ease-in-out;
+    padding-top: 3rem;
+    margin-left: 64rem;
+  }
+
+  h3 {
+    cursor: pointer;
+    background: linear-gradient(to right, #3a7bec 23%, #25c2e9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.4s ease-in-out;
+
+    margin-left: 39rem;
+  }
+
+  &__input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem;
+    margin-left: 20rem;
+
+    input {
+      width: 40rem;
+      height: 2rem;
+      border: 2px solid #25c2e9;
+      border-radius: 30px;
+    }
+  }
+
+  &__username-input {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  &__password-input {
+    display: flex;
+    flex-direction: row;
+    gap: 2.1rem;
+  }
+
+  &__animated-image {
+    margin-left: 61rem;
+  }
+}
+
+input.btn {
+  width: 7rem;
+  height: 3rem;
+  border: 3px solid #fff;
+  border-radius: 30px;
+  background: linear-gradient(to right, #3a7bec 23%, #25c2e9);
+  color: #fff;
+  font-family: $font-merriweather;
+  font-size: 20px;
+  margin: 2rem;
+  margin-left: 43rem;
+}

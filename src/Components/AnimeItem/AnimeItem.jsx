@@ -34,7 +34,6 @@ function AnimeItem() {
     const response = await fetch(`https://api.jikan.moe/v4/anime/${anime}`);
     const data = await response.json();
     setAnime(data.data);
-    console.log(data.data);
   };
 
   //get characters
@@ -127,7 +126,6 @@ function AnimeItem() {
           ></iframe>
         )}
       </div>
-
       <h3 className="anime-item__title">Characters</h3>
       <div className="anime-item__characters">
         {characters?.map((character, index) => {

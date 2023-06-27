@@ -4,7 +4,7 @@
 .popular-anime {
   font-family: $font-merriweather;
   display: flex;
-  //background: linear-gradient(to right, #a40707, #f0621b);
+
   &__display-box {
     margin-top: 2rem;
     padding: 2rem 6rem 2rem 5rem;
@@ -13,9 +13,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
-    background-color: #f4eaf1;
-    //background-color: black;
-    border-top: 5px solid #d3abd3;
+    background-color: #020c10;
+    border-top: 5px solid #fff;
 
     a {
       height: 500px;
@@ -27,6 +26,10 @@
         height: 100%;
         object-fit: cover;
         border-radius: 5px;
+      }
+
+      &:hover {
+        transform: scale(1.1, 1.1);
       }
     }
   }

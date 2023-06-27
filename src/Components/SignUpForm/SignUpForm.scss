@@ -1,0 +1,86 @@
+@import "../../styles/fonts.scss";
+
+.sign-up {
+  background-color: #020c10;
+  color: #fff;
+  height: 100vh;
+  font-family: $font-merriweather;
+
+  form {
+    margin: 15rem;
+    margin-top: 2rem;
+  }
+
+  &__title {
+    cursor: pointer;
+    background: linear-gradient(to right, #3a7bec 23%, #25c2e9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.4s ease-in-out;
+    padding-top: 15rem;
+    margin-left: 53rem;
+  }
+
+  h3 {
+    cursor: pointer;
+    background: linear-gradient(to right, #3a7bec 23%, #25c2e9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.4s ease-in-out;
+
+    margin-left: 39rem;
+  }
+
+  &__input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem;
+    margin-left: 30%;
+
+    input {
+      width: 50rem;
+      height: 2rem;
+      border: 2px solid #25c2e9;
+      border-radius: 30px;
+    }
+  }
+
+  &__username-input {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  &__password-input {
+    display: flex;
+    flex-direction: row;
+    gap: 2.1rem;
+  }
+
+  &__anime-image {
+    margin-left: 40rem;
+    width: 570px;
+    position: absolute;
+    right: 2rem;
+    bottom: 5rem;
+  }
+}
+
+input.sign-up-btn {
+  width: 7rem;
+  height: 3rem;
+  border: 3px solid #fff;
+  border-radius: 30px;
+  background: linear-gradient(to right, #3a7bec 23%, #25c2e9);
+  color: #fff;
+  font-family: $font-merriweather;
+  font-size: 20px;
+  margin: 2rem;
+  margin-left: 38rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
